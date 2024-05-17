@@ -22,11 +22,7 @@ class TestBooksCollector:
 
     # напиши свои тесты ниже
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
-    import pytest
-    from main import BooksCollector
 
-import pytest
-from main import BooksCollector
 
 class TestBooksCollector:
 
@@ -69,7 +65,6 @@ class TestBooksCollector:
     def test_add_book_in_favorites(self):
         collector = BooksCollector()
         collector.add_new_book('Маленький принц')
-        collector.set_book_genre('Маленький принц', 'Фэнтези')
         collector.add_book_in_favorites('Маленький принц')
         assert collector.get_list_of_favorites_books() == ['Маленький принц']
 
